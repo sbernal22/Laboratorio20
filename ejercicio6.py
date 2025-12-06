@@ -5,9 +5,9 @@ def normalizar(lista, modo):
         return None
     arr = np.array(lista)
     if modo == "minmax":
-        minimo = np.min(arr)
-        maximo = np.max(arr)
-        if maximo - minimo == 0:
+        minimo=np.min(arr)
+        maximo=np.max(arr)
+        if maximo-minimo == 0:
             print("Error: todos los valores son iguales")
             return None
         return ((arr-minimo)/(maximo-minimo)).tolist()
